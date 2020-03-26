@@ -13,8 +13,8 @@ import NavLink from './NavLink';
 
 const useStyles = makeStyles({
   root: {
-    borderBottom: '1px solid #ddd',
-    boxShadow: '0px 2px 15px -8px rgba(0, 0, 0, 0.42)',
+    borderBottom: props => props.darkMode ? 'none' : '1px solid #ddd',
+    boxShadow: props => props.darkMode ? 'none' : '0px 2px 15px -8px rgba(0, 0, 0, 0.42)',
     height: '100px',
     background: props => props.darkMode ? DARK : LIGHT,
   },
@@ -53,7 +53,7 @@ const Nav = props => {
   const { nav } = data;
 
   return (
-    <header className={classes.root}>
+    <div className={classes.root}>
       <div className={classes.container}>
         <img className={classes.img} src={tower} alt="tower logo" onClick={() => history.push('/')} />
         <div className={classes.links}>
@@ -69,7 +69,7 @@ const Nav = props => {
           )}
         </div>
       </div>
-    </header>
+    </div>
   );
 };
 

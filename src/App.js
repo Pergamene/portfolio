@@ -17,9 +17,15 @@ const App = () => {
     <div className="App">
       <Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       
-      <Route exact path="/" component={Landing} />
-      <Route exact path="/current-projects" component={CurrentProjects} />
-      <Route exact path="/previous-projects" component={PreviousProjects} />
+      <Route exact path="/">
+        <Landing darkMode={darkMode} />
+      </Route>
+      <Route exact path="/current-projects">
+        <CurrentProjects darkMode={darkMode} />
+      </Route>
+      <Route exact path="/previous-projects">
+        <PreviousProjects darkMode={darkMode} />
+      </Route>
     </div>
   );
 }
