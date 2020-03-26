@@ -5,6 +5,7 @@ import Nav from './components/Nav';
 import Landing from './components/Landing';
 import CurrentProjects from './components/CurrentProjects';
 import PreviousProjects from './components/PreviousProjects';
+import Footer from './components/Footer';
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -26,6 +27,8 @@ const App = () => {
       <Route exact path="/previous-projects">
         <PreviousProjects darkMode={darkMode} />
       </Route>
+
+      <Footer darkMode={darkMode} />
     </div>
   );
 }
