@@ -20,7 +20,7 @@ const useStyles = makeStyles({
   },
   h1: {
     fontSize: '80px',
-    fontVariant: 'small-caps',
+    fontWeight: '300',
     margin: '20vh 0 0',
   },
   p: {
