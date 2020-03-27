@@ -39,7 +39,7 @@ const Landing = props => {
 
   useEffect(() => {
     setCurrentPage(match.path);
-  }, []);
+  });
 
   return (
     <div className={classes.root}>

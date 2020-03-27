@@ -28,7 +28,7 @@ const NavLink = props => {
 
   useEffect(() => {
     setIsCurrent(currentPage === link.path);
-  }, [currentPage]);
+  }, [currentPage, link.path]);
 
   const handleClick = () => {
     history.push(link.path);

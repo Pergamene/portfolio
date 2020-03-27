@@ -19,7 +19,7 @@ const Bio = props => {
 
   useEffect(() => {
     setCurrentPage(match.path);
-  }, []);
+  });
 
   return (
     <div className={classes.root}>Bio</div>

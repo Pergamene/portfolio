@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import WbSunnyIcon from '@material-ui/icons/WbSunny';
 import Brightness2Icon from '@material-ui/icons/Brightness2';
 import { useHistory } from 'react-router-dom';

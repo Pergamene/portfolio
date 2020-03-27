@@ -19,7 +19,7 @@ const CurrentProjects = props => {
 
   useEffect(() => {
     setCurrentPage(match.path);
-  }, []);
+  });
 
   return (
     <div className={classes.root}>Current Projects</div>

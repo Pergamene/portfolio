@@ -19,7 +19,7 @@ const PreviousProjects = props => {
 
   useEffect(() => {
     setCurrentPage(match.path);
-  }, []);
+  });
 
   return (
     <div className={classes.root}>Previous Projects</div>
