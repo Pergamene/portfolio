@@ -12,7 +12,7 @@ const useStyles = makeStyles({
   },
 });
 
-const CurrentProjects = props => {
+const Bio = props => {
   const match = useRouteMatch();
   const { darkMode, setCurrentPage } = props;
   const classes = useStyles({darkMode: darkMode});
@@ -22,8 +22,8 @@ const CurrentProjects = props => {
   }, []);
 
   return (
-    <div className={classes.root}>Current Projects</div>
+    <div className={classes.root}>Bio</div>
   );
 };
 
-export default CurrentProjects;
+export default Bio;
