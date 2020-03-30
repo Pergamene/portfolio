@@ -27,7 +27,8 @@ const NavLink = props => {
     <Link className={classes.root} 
       activeStyle={{
         borderBottom: `4px solid ${darkMode ? LIGHT : DARK}`,
-        borderTop: `4px solid ${darkMode ? DARK : LIGHT}`,
+        paddingTop: '4px',
+        transition: 'all 0.3s ease-out',
       }} 
       to={link.path}
     >
