@@ -1,7 +1,7 @@
 import React from 'react';
 import WbSunnyIcon from '@material-ui/icons/WbSunny';
 import Brightness2Icon from '@material-ui/icons/Brightness2';
-import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 
 import tower from '../assets/tower.png';
@@ -48,22 +48,19 @@ const useStyles = makeStyles({
 });
 
 const Nav = props => {
-  const { darkMode, toggleDarkMode, currentPage } = props;
-  const history = useHistory();
+  const { darkMode, toggleDarkMode } = props;
   const classes = useStyles({darkMode: darkMode});
   const { nav } = data;
-
-  const handleLogoClick = () => {
-    history.push('/')
-  };
 
   return (
     <div className={classes.root}>
       <div className={classes.container}>
-        <img className={classes.img} src={tower} alt="tower logo" onClick={handleLogoClick} />
+        <Link to="/">
+          <img className={classes.img} src={tower} alt="tower logo" />
+        </Link>
         <div className={classes.links}>
           {nav.map(link => {
-            return <NavLink link={link} darkMode={darkMode} currentPage={currentPage} key={link.id} />
+            return <NavLink link={link} darkMode={darkMode} key={link.id} />
           })}
         </div>
         <div className={classes.toggle}>

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import React from 'react';
+import { NavLink as Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 
 import { DARK, LIGHT } from '../assets/colors';
@@ -10,8 +10,7 @@ const useStyles = makeStyles({
     height: '100%',
     display: 'flex',
     alignItems: 'center',
-    borderBottom: props => props.isCurrent ? `4px solid ${props.darkMode ? LIGHT : DARK}` : 'none',
-    borderTop: props => props.isCurrent ? `4px solid ${props.darkMode ? DARK : LIGHT}` : 'none',
+    textDecoration: 'none',
   },
   link: {
     padding: '20px',
@@ -21,23 +20,19 @@ const useStyles = makeStyles({
 });
 
 const NavLink = props => {
-  const history = useHistory();
-  const { link, darkMode, currentPage } = props;
-  const [isCurrent, setIsCurrent] = useState(false);
-  const classes = useStyles({darkMode: darkMode, isCurrent: isCurrent, last: link.last});
-
-  useEffect(() => {
-    setIsCurrent(currentPage === link.path);
-  }, [currentPage, link.path]);
-
-  const handleClick = () => {
-    history.push(link.path);
-  };
+  const { link, darkMode } = props;
+  const classes = useStyles({darkMode: darkMode, last: link.last});
 
   return (
-    <div className={classes.root}>
-      <div className={classes.link} onClick={handleClick}>{link.name}</div>
-    </div>
+    <Link className={classes.root} 
+      activeStyle={{
+        borderBottom: `4px solid ${darkMode ? LIGHT : DARK}`,
+        borderTop: `4px solid ${darkMode ? DARK : LIGHT}`,
+      }} 
+      to={link.path}
+    >
+      <div className={classes.link}>{link.name}</div>
+    </Link>
   );
 };
 
