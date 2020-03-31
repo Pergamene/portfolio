@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route } from 'react-router-dom';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import Nav from './components/Nav';
 import Landing from './components/Landing';
@@ -8,8 +9,12 @@ import CurrentProjects from './components/CurrentProjects';
 import PreviousProjects from './components/PreviousProjects';
 
 const App = () => {
-  const [darkMode, setDarkMode] = useState(false);
-  const [currentPage, setCurrentPage] = useState('/');
+  const matches = useMediaQuery('(prefers-color-scheme: dark)');
+  const [darkMode, setDarkMode] = useState(matches);
+
+  useEffect(() => {
+    setDarkMode(matches);
+  }, [matches]);
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -17,19 +22,19 @@ const App = () => {
 
   return (
     <div className="App">
-      <Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode} currentPage={currentPage} />
+      <Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       
       <Route exact path="/">
-        <Landing darkMode={darkMode} setCurrentPage={setCurrentPage} />
+        <Landing darkMode={darkMode} />
       </Route>
       <Route exact path="/bio">
-        <Bio darkMode={darkMode} setCurrentPage={setCurrentPage} />
+        <Bio darkMode={darkMode} />
       </Route>
       <Route exact path="/current-projects">
-        <CurrentProjects darkMode={darkMode} setCurrentPage={setCurrentPage} />
+        <CurrentProjects darkMode={darkMode} />
       </Route>
       <Route exact path="/previous-projects">
-        <PreviousProjects darkMode={darkMode} setCurrentPage={setCurrentPage} />
+        <PreviousProjects darkMode={darkMode} />
       </Route>
     </div>
   );

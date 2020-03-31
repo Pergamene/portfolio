@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { useRouteMatch } from 'react-router-dom';
 
 import { DARK, DARK_PAGE, LIGHT } from '../assets/colors';
 import { data } from '../assets/data';
@@ -34,14 +33,9 @@ const useStyles = makeStyles({
 });
 
 const Landing = props => {
-  const match = useRouteMatch();
-  const { darkMode, setCurrentPage } = props;
+  const { darkMode } = props;
   const classes = useStyles({darkMode: darkMode});
   const { landing } = data;
-
-  useEffect(() => {
-    setCurrentPage(match.path);
-  });
 
   return (
     <div className={classes.root}>

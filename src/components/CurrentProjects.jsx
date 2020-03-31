@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { useRouteMatch } from 'react-router-dom';
 
 import { DARK, DARK_PAGE, LIGHT } from '../assets/colors';
 
@@ -15,13 +14,8 @@ const useStyles = makeStyles({
 });
 
 const CurrentProjects = props => {
-  const match = useRouteMatch();
-  const { darkMode, setCurrentPage } = props;
+  const { darkMode } = props;
   const classes = useStyles({darkMode: darkMode});
-
-  useEffect(() => {
-    setCurrentPage(match.path);
-  });
 
   return (
     <div className={classes.root}>Current Projects</div>

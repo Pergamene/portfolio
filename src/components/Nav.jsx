@@ -3,6 +3,7 @@ import WbSunnyIcon from '@material-ui/icons/WbSunny';
 import Brightness2Icon from '@material-ui/icons/Brightness2';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import tower from '../assets/tower.png';
 
@@ -28,10 +29,12 @@ const useStyles = makeStyles({
   },
   img: {
     padding: '10px',
+    marginTop: '4px',
     cursor: 'pointer',
   },
   links: {
     display: 'flex',
+    flexDirection: props => props.matches ? 'column' : 'row',
     height: '100%',
     flex: '1',
     cursor: 'pointer',
@@ -61,7 +64,8 @@ const useStyles = makeStyles({
 
 const Nav = props => {
   const { darkMode, toggleDarkMode } = props;
-  const classes = useStyles({darkMode: darkMode});
+  const matches = useMediaQuery('(max-width: 630px)');
+  const classes = useStyles({darkMode: darkMode, matches: matches});
   const { nav } = data;
 
   return (
