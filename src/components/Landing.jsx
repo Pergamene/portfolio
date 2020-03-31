@@ -34,7 +34,7 @@ const useStyles = makeStyles({
 
 const Landing = props => {
   const { darkMode } = props;
-  const classes = useStyles({darkMode: darkMode});
+  const classes = useStyles({darkMode});
   const { landing } = data;
 
   return (

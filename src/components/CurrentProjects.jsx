@@ -15,7 +15,7 @@ const useStyles = makeStyles({
 
 const CurrentProjects = props => {
   const { darkMode } = props;
-  const classes = useStyles({darkMode: darkMode});
+  const classes = useStyles({darkMode});
 
   return (
     <div className={classes.root}>Current Projects</div>

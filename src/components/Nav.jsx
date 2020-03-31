@@ -16,20 +16,21 @@ const useStyles = makeStyles({
   root: {
     borderBottom: props => props.darkMode ? `1px solid ${DARK}` : '1px solid #ddd',
     boxShadow: props => props.darkMode ? 'none' : '0px 2px 15px -8px rgba(0, 0, 0, 0.42)',
-    height: '100px',
+    height: props => props.matches ? '' : '100px',
     backgroundColor: props => props.darkMode ? DARK : LIGHT,
     transition: 'all 1s ease-out',
   },
   container: {
     display: 'flex',
+    flexDirection: props => props.matches ? 'column' : 'row',
     maxWidth: '1200px',
     margin: '0 auto',
     height: '100%',
     alignItems: 'center',
   },
   img: {
-    padding: '10px',
-    marginTop: '4px',
+    padding: props => props.matches ? '10px 0 0 0' : '10px',
+    marginTop: props => props.matches ? '0' : '4px',
     cursor: 'pointer',
   },
   links: {
@@ -38,6 +39,7 @@ const useStyles = makeStyles({
     height: '100%',
     flex: '1',
     cursor: 'pointer',
+    alignItems: props => props.matches ? 'center' : '',
   },
   toggle: {
     padding: '10px',
@@ -65,7 +67,7 @@ const useStyles = makeStyles({
 const Nav = props => {
   const { darkMode, toggleDarkMode } = props;
   const matches = useMediaQuery('(max-width: 630px)');
-  const classes = useStyles({darkMode: darkMode, matches: matches});
+  const classes = useStyles({darkMode, matches});
   const { nav } = data;
 
   return (
@@ -79,10 +81,10 @@ const Nav = props => {
             return <NavLink link={link} darkMode={darkMode} key={link.id} />
           })}
         </div>
-        <div className={classes.toggle}>
+        {!matches && <div className={classes.toggle}>
           <WbSunnyIcon className={`${classes.sun} ${darkMode ? classes.visible : ''}`} onClick={toggleDarkMode} />
           <Brightness2Icon className={`${classes.moon} ${darkMode ? '' : classes.visible}`} onClick={toggleDarkMode} />
-        </div>
+        </div>}
       </div>
     </div>
   );
