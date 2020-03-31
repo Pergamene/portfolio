@@ -26,15 +26,49 @@ export const data = {
   },
   bio: {
     name: 'Austin Glenn',
+    missionStatement: "Software Engineer and Instructor with an interest in changing the software developer's educational experience.",
     phone: '801-668-3608',
     email: 'austinkglenn@gmail.com',
     githublink: 'github.com/Pergamene',
     linkedinLink: 'linkedin.com/in/austinkglenn',
+    skills: 'HTML, CSS, JavaScript, TypeScript, React, Redux, Golang, Java',
   },
   currentProjects: [
-
+    {
+      name: 'Spiderweb',
+      date: 'Current',
+      stack: 'React, TypeScript, HTML, CSS, Golang, MySQL',
+      github: '',
+      description: 'A site to manage the complex structure and relationships between aspects of worldbuilding and story writing.',
+    },
   ],
   previousProjects: [
-
+    {
+      name: 'Portfolio',
+      date: '2020',
+      stack: 'React, HTML, CSS',
+      github: '',
+      description: 'This site designed to showcase my work and skills.',
+    },
+    {
+      name: 'Markdown Partitioner',
+      date: '2019',
+      stack: 'JavaScript',
+      github: '',
+      description: 'A program to convert between user-inputted markdown, to a formated JSON used to display formatted HTML.',
+    },{
+      name: 'Evermore Cipher',
+      date: '2019',
+      stack: 'JavaScript',
+      link: 'https://www.shardrealms.com/evermore/cipher/',
+      github: '',
+      description: '',
+    },{
+      name: 'Traveling Knight',
+      date: '2020',
+      stack: 'React, HTML, CSS',
+      github: '',
+      description: '',
+    },
   ],
 };
