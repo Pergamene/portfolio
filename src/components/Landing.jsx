@@ -27,7 +27,7 @@ const useStyles = makeStyles({
   },
   p: {
     fontWeight: '500',
-    fontSize: props => props.matches ? '16px' : '20px',
+    fontSize: props => props.matches ? '16px' : '18px',
     margin: '0',
     padding: '0 20px',
   },

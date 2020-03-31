@@ -21,6 +21,11 @@ const useStyles = makeStyles({
     margin: '0 auto',
     alignItems: 'center',
   },
+  h2: {
+    fontSize: '36px',
+    margin: '20px',
+    fontWeight: '300',
+  },
 });
 
 const PreviousProjects = props => {
@@ -31,9 +36,9 @@ const PreviousProjects = props => {
   return (
     <div className={classes.root}>
       <div className={classes.page}>
-        <h2>Previous Projects</h2>
+        <h2 className={classes.h2}>Previous Projects</h2>
         {previousProjects.map(project => {
-          return <Project data={project} />
+          return <Project darkMode={darkMode} data={project} key={project.id} />
         })}
       </div>
     </div>

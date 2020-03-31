@@ -34,41 +34,60 @@ export const data = {
     skills: 'HTML, CSS, JavaScript, TypeScript, React, Redux, Golang, Java',
   },
   currentProjects: [
+    // {
+    //   name: 'Spiderweb',
+    //   date: 'Current',
+    //   stack: 'React, TypeScript, HTML, CSS, Golang, MySQL',
+    //   repo: '',
+    //   description: 'A site to manage the complex structure and relationships between aspects of worldbuilding and story writing.',
+    // },
     {
-      name: 'Spiderweb',
+      id: 0,
+      name: 'Instructional Docs',
       date: 'Current',
-      stack: 'React, TypeScript, HTML, CSS, Golang, MySQL',
-      github: '',
-      description: 'A site to manage the complex structure and relationships between aspects of worldbuilding and story writing.',
-    },
+      stack: 'Markdown',
+      repo: 'https://github.com/Devo-Tower/instruction',
+      description: 'Instructional documents for helping new programmers learn web technologies and concepts.'
+    }
   ],
   previousProjects: [
     {
+      id: 0,
       name: 'Portfolio',
       date: '2020',
       stack: 'React, HTML, CSS',
-      github: '',
+      repo: 'https://github.com/Pergamene/portfolio',
       description: 'This site designed to showcase my work and skills.',
     },
     {
+      id: 1,
       name: 'Markdown Partitioner',
       date: '2019',
       stack: 'JavaScript',
-      github: '',
+      repo: 'https://github.com/Pergamene/sp-markdown-partitioner',
       description: 'A program to convert between user-inputted markdown, to a formated JSON used to display formatted HTML.',
-    },{
+    },
+    {
+      id: 2,
       name: 'Evermore Cipher',
       date: '2019',
       stack: 'JavaScript',
       link: 'https://www.shardrealms.com/evermore/cipher/',
-      github: '',
-      description: '',
-    },{
+      repo: 'https://github.com/rhyeen/shardrealms_site/tree/better-decode',
+      description: 'A project to decipher encoded messages around the Evermore Park in Pleasant Grove UT',
+      bullets: [
+        'Created the logic for choosing how to decode the message', 
+        'Created the logic that creates all possible decoded messages', 
+        'Created the logic that suggests which decoded message is most likely correct',
+      ],
+    },
+    {
+      id: 3,
       name: 'Traveling Knight',
       date: '2020',
-      stack: 'React, HTML, CSS',
-      github: '',
-      description: '',
+      stack: 'TypeScript, React, HTML, CSS',
+      repo: 'https://github.com/Pergamene/traveling-knight',
+      description: 'The primary purpose of this project was to learn TypeScript, and to try making a game with React',
     },
   ],
 };

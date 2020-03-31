@@ -24,6 +24,11 @@ const useStyles = makeStyles({
     display: 'flex',
     flexDirection: 'column',
   },
+  h2: {
+    fontSize: '36px',
+    margin: '20px',
+    fontWeight: '300',
+  },
   contact: {
     display: 'flex',
     flexDirection: 'column',
@@ -40,7 +45,7 @@ const Bio = props => {
       <div className={classes.page}>
         <div className={classes.profile}>
           {/* <img src={headshot} alt="headshot" /> */}
-          <h2>{bio.name}</h2>
+          <h2 className={classes.h2}>{bio.name}</h2>
         </div>
         <div className={classes.contact}>
           <p>{bio.missionStatement}</p>
