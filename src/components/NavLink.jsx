@@ -16,6 +16,7 @@ const useStyles = makeStyles({
     padding: '20px',
     color: props => props.darkMode ? LIGHT : DARK,
     borderRight: props => props.last ? 'none' : `2px solid ${props.darkMode ? LIGHT : DARK }`,
+    transition: 'all 1s ease-out',
   },
 });
 

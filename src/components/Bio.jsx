@@ -9,6 +9,8 @@ const useStyles = makeStyles({
     minHeight: 'calc(100vh - 100px)',
     backgroundColor: props => props.darkMode ? DARK_PAGE : '',
     color: props => props.darkMode ? LIGHT : DARK,
+    transition: '1s ease-out',
+    transitionProperty: 'background, color',
   },
 });
 

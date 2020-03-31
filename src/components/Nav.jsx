@@ -13,10 +13,11 @@ import NavLink from './NavLink';
 
 const useStyles = makeStyles({
   root: {
-    borderBottom: props => props.darkMode ? 'none' : '1px solid #ddd',
+    borderBottom: props => props.darkMode ? `1px solid ${DARK}` : '1px solid #ddd',
     boxShadow: props => props.darkMode ? 'none' : '0px 2px 15px -8px rgba(0, 0, 0, 0.42)',
     height: '100px',
-    background: props => props.darkMode ? DARK : LIGHT,
+    backgroundColor: props => props.darkMode ? DARK : LIGHT,
+    transition: 'all 1s ease-out',
   },
   container: {
     display: 'flex',
@@ -40,10 +41,21 @@ const useStyles = makeStyles({
   },
   sun: {
     color: LIGHT,
+    position: 'relative',
+    left: '24px',
+    opacity: '0%',
+    transition: 'opacity 0.3s ease-out',
   },
   moon: {
     color: DARK,
     transform: 'rotate(30deg)',
+    position: 'relative',
+    opacity: '0%',
+    transition: 'opacity 0.3s ease-out',
+  },
+  visible: {
+    transition: 'opacity 1s ease-out',
+    opacity: '100%',
   },
 });
 
@@ -64,11 +76,8 @@ const Nav = props => {
           })}
         </div>
         <div className={classes.toggle}>
-          {darkMode ? (
-            <WbSunnyIcon className={classes.sun} onClick={toggleDarkMode} />
-          ) : (
-            <Brightness2Icon className={classes.moon} onClick={toggleDarkMode} />
-          )}
+          <WbSunnyIcon className={`${classes.sun} ${darkMode ? classes.visible : ''}`} onClick={toggleDarkMode} />
+          <Brightness2Icon className={`${classes.moon} ${darkMode ? '' : classes.visible}`} onClick={toggleDarkMode} />
         </div>
       </div>
     </div>
