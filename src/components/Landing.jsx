@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import { DARK, DARK_PAGE, LIGHT } from '../assets/colors';
 import { data } from '../assets/data';
@@ -20,21 +21,22 @@ const useStyles = makeStyles({
     alignItems: 'center',
   },
   h1: {
-    fontSize: '80px',
+    fontSize: props => props.matches ? '8vw' : '80px',
     fontWeight: '300',
-    margin: '20vh 0 0',
+    margin: props => props.matches ? '8vw 0 0' : '20vh 0 0',
   },
   p: {
     fontWeight: '500',
-    fontSize: '20px',
+    fontSize: props => props.matches ? '16px' : '20px',
     margin: '0',
     padding: '0 20px',
   },
 });
 
 const Landing = props => {
+  const matches = useMediaQuery('(max-width: 930px)');
   const { darkMode } = props;
-  const classes = useStyles({darkMode});
+  const classes = useStyles({darkMode, matches});
   const { landing } = data;
 
   return (
