@@ -23,9 +23,8 @@ const useStyles = makeStyles({
     flexDirection: props => props.matches ? 'column' : 'row',
     maxWidth: '1200px',
     margin: '0 auto',
-    paddingTop: '20vh',
+    padding: props => props.matches ? '8vw 20px 0' : '20vh 20px 0',
     alignItems: 'center',
-    padding: '20px',
   },
   profile: {
     display: 'flex',
@@ -60,6 +59,7 @@ const useStyles = makeStyles({
   },
   icons: {
     dipslay: 'flex',
+    paddingBottom: '20px',
   },
 });
 
