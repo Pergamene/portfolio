@@ -61,7 +61,7 @@ const useStyles = makeStyles({
   },
   icons: {
     display: 'flex',
-    paddingBottom: '20px',
+    paddingBottom: props => props.matches ? '20px' : '0',
   },
   button: {
     color: 'inherit',
