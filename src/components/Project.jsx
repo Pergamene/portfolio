@@ -71,8 +71,12 @@ const Project = props => {
         <p className={classes.stack}>{data.stack}</p>
       </div>
       <div className={classes.links}>
-        <a className={`${classes.button} ${classes.repo}`} href={data.repo}>View Repo</a>
-        {data.link && <a className={`${classes.button} ${classes.link}`} href={data.link}>Deployed Project</a>}
+        <a className={`${classes.button} ${classes.repo}`} href={data.repo} target="_blank" rel="noopener noreferrer">
+          View Repo
+        </a>
+        {data.link && <a className={`${classes.button} ${classes.link}`} href={data.link} target="_blank" rel="noopener noreferrer">
+          Deployed Project
+        </a>}
       </div>
       <p className={classes.description}>{data.description}</p>
       {data.bullets && <ul className={classes.bullets}>
