@@ -86,6 +86,7 @@ export const data = {
       name: 'Traveling Knight',
       date: '2020',
       stack: 'TypeScript, React, HTML, CSS',
+      link: 'https://pergamene.github.io/traveling-knight/',
       repo: 'https://github.com/Pergamene/traveling-knight',
       description: 'The primary purpose of this project was to learn TypeScript, and to try making a game with React',
     },

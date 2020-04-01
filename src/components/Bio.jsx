@@ -34,12 +34,14 @@ const useStyles = makeStyles({
     transition: 'border 1s ease-out',
   },
   image: {
-    width: '300px',
-    height: '300px',
     borderRadius: '150px',
   },
   h2: {
     fontSize: '36px',
+    margin: '0',
+    fontWeight: '300',
+  },
+  h3: {
     margin: '0',
     fontWeight: '300',
   },
@@ -58,8 +60,17 @@ const useStyles = makeStyles({
     padding: '0 10px 10px 0',
   },
   icons: {
-    dipslay: 'flex',
+    display: 'flex',
     paddingBottom: '20px',
+  },
+  button: {
+    color: 'inherit',
+    textDecoration: 'none',
+    padding: '7px',
+    border: props => `2px solid ${props.darkMode ? LIGHT : DARK }`,
+    transition: 'border 1s ease-out',
+    borderRadius: '20px',
+    margin: '0 10px 10px 0',
   },
 });
 
@@ -78,20 +89,23 @@ const Bio = props => {
         <div className={classes.contact}>
           <h2 className={classes.h2}>{bio.name}</h2>
           <p className={classes.p}>{bio.missionStatement}</p>
-          {/* @TODO: change path to /resume */}
+          <h3 className={classes.h3}>Skills</h3>
           <p className={classes.p}>{bio.skills}</p>
-          <a className={classes.links} href={resume}>Resume</a>
+          <h3 className={classes.h3}>Contact</h3>
           <a className={classes.links} href={`tel:+1${bio.phone}`}>{bio.phone}</a>
           <a className={classes.links} href={`mailto:${bio.email}`}>{bio.email}</a>
           <div className={classes.icons}>
-            <a className={classes.links} href="https://github.com/Pergamene">
+            {/* @TODO: change path to /resume */}
+            <a className={`${classes.links} ${classes.button}`} href={resume} target="_blank" rel="noopener noreferrer">
+              Resume
+            </a>
+            <a className={classes.links} href="https://github.com/Pergamene" target="_blank" rel="noopener noreferrer">
               <GitHubIcon fontSize={'large'} />
             </a>
-            <a className={classes.links} href="https://www.linkedin.com/in/austinkglenn/">
+            <a className={classes.links} href="https://www.linkedin.com/in/austinkglenn/" target="_blank" rel="noopener noreferrer">
               <LinkedInIcon fontSize={'large'} />
             </a>
           </div>
-
         </div>
       </div>
     </div>
