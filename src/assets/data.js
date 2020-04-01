@@ -27,11 +27,11 @@ export const data = {
   bio: {
     name: 'Austin Glenn',
     missionStatement: "Software Engineer and Instructor with an interest in changing the software developer's educational experience.",
+    skills: 'React, Redux, HTML, CSS, JavaScript, TypeScript, Golang, Java',
     phone: '801-668-3608',
     email: 'austinkglenn@gmail.com',
     githublink: 'github.com/Pergamene',
     linkedinLink: 'linkedin.com/in/austinkglenn',
-    skills: 'HTML, CSS, JavaScript, TypeScript, React, Redux, Golang, Java',
   },
   currentProjects: [
     // {
