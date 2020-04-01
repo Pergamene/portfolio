@@ -7,7 +7,7 @@ import { data } from '../assets/data';
 
 const useStyles = makeStyles({
   root: {
-    minHeight: 'calc(100vh - 100px)',
+    minHeight: props => props.matches ? 'calc(100vh - 189px)' : 'calc(100vh - 100px)',
     backgroundColor: props => props.darkMode ? DARK_PAGE : '',
     color: props => props.darkMode ? LIGHT : DARK,
     transition: '1s linear',

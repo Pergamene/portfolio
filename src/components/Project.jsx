@@ -11,6 +11,7 @@ const useStyles = makeStyles({
     width: '100%',
     padding: '0 20px 20px',
     marginBottom: '20px',
+    boxSizing: 'border-box',
   },
   h3: {
     margin: '0',
