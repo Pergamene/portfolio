@@ -74,11 +74,11 @@ export const data = {
       stack: 'JavaScript',
       link: 'https://www.shardrealms.com/evermore/cipher/',
       repo: 'https://github.com/rhyeen/shardrealms_site/tree/better-decode',
-      description: 'A project to decipher encoded messages around the Evermore Park in Pleasant Grove UT',
+      description: 'A project to decipher encoded messages around the Evermore Park in Pleasant Grove UT.',
       bullets: [
-        'Created the logic for choosing how to decode the message', 
-        'Created the logic that creates all possible decoded messages', 
-        'Created the logic that suggests which decoded message is most likely correct',
+        'Created the logic for choosing how to decode the message.', 
+        'Created the logic that creates all possible decoded messages.', 
+        'Created the logic that suggests which decoded message is most likely correct.',
       ],
     },
     {
@@ -88,7 +88,7 @@ export const data = {
       stack: 'TypeScript, React, HTML, CSS',
       link: 'https://pergamene.github.io/traveling-knight/',
       repo: 'https://github.com/Pergamene/traveling-knight',
-      description: 'The primary purpose of this project was to learn TypeScript, and to try making a game with React',
+      description: 'The primary purpose of this project was to learn TypeScript, and to try making a game with React.',
     },
   ],
 };

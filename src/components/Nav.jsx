@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
-import tower from '../assets/tower.png';
+import tower from '../assets/tower.svg';
 
 import { DARK, LIGHT } from '../assets/colors';
 import { data } from '../assets/data';
@@ -38,7 +38,6 @@ const useStyles = makeStyles({
     flexDirection: props => props.matches ? 'column' : 'row',
     height: '100%',
     flex: '1',
-    cursor: 'pointer',
     alignItems: props => props.matches ? 'center' : '',
   },
   toggle: {

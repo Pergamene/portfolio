@@ -11,6 +11,7 @@ const useStyles = makeStyles({
     height: '100%',
     display: 'flex',
     alignItems: 'center',
+    cursor: 'pointer',
     textDecoration: 'none',
   },
   link: {
