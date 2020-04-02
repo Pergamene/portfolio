@@ -95,7 +95,6 @@ const Bio = props => {
           <a className={classes.links} href={`tel:+1${bio.phone}`}>{bio.phone}</a>
           <a className={classes.links} href={`mailto:${bio.email}`}>{bio.email}</a>
           <div className={classes.icons}>
-            {/* @TODO: change path to /resume */}
             <a className={`${classes.links} ${classes.button}`} href={resume} target="_blank" rel="noopener noreferrer">
               Resume
             </a>
