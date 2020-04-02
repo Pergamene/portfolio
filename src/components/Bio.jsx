@@ -67,6 +67,9 @@ const useStyles = makeStyles({
     textDecoration: 'none',
     padding: '0 10px 10px 0',
   },
+  icon: {
+    padding: '0 8px 10px 0',
+  },
   button: {
     color: 'inherit',
     textDecoration: 'none',
@@ -92,7 +95,7 @@ const Bio = props => {
         </div>
         <div className={classes.contact}>
           <h2 className={classes.h2}>{bio.name}</h2>
-          <p className={`${classes.p} ${classes.mission}`}>{bio.missionStatement}</p>
+          <p className={classes.p}>{bio.missionStatement}</p>
           <h3 className={classes.h3}>Skills</h3>
           <p className={classes.p}>{bio.skills}</p>
           <h3 className={classes.h3}>Contact</h3>
@@ -102,10 +105,10 @@ const Bio = props => {
             <a className={classes.button} href={resume} target="_blank" rel="noopener noreferrer">
               Resume
             </a>
-            <a className={classes.links} href="https://github.com/Pergamene" target="_blank" rel="noopener noreferrer">
+            <a className={`${classes.links} ${classes.icon}`} href="https://github.com/Pergamene" target="_blank" rel="noopener noreferrer">
               <GitHubIcon fontSize={'large'} />
             </a>
-            <a className={classes.links} href="https://www.linkedin.com/in/austinkglenn/" target="_blank" rel="noopener noreferrer">
+            <a className={`${classes.links} ${classes.icon}`} href="https://www.linkedin.com/in/austinkglenn/" target="_blank" rel="noopener noreferrer">
               <LinkedInIcon fontSize={'large'} />
             </a>
           </div>
