@@ -30,6 +30,7 @@ const useStyles = makeStyles({
     fontSize: props => props.matches ? '16px' : '18px',
     margin: '0',
     padding: '0 20px',
+    textAlign: 'justify',
   },
 });
 

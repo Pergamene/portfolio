@@ -47,6 +47,7 @@ const useStyles = makeStyles({
   },
   p: {
     margin: '0 0 10px',
+    textAlign: props => props.matches ? 'center' : 'left',
   },
   contact: {
     display: 'flex',
@@ -57,11 +58,14 @@ const useStyles = makeStyles({
   links: {
     color: 'inherit',
     textDecoration: 'none',
-    padding: '0 10px 10px 0',
+    padding: '0 0 10px 0',
   },
   icons: {
     display: 'flex',
     paddingBottom: props => props.matches ? '20px' : '0',
+    color: 'inherit',
+    textDecoration: 'none',
+    padding: '0 10px 10px 0',
   },
   button: {
     color: 'inherit',
@@ -88,14 +92,14 @@ const Bio = props => {
         </div>
         <div className={classes.contact}>
           <h2 className={classes.h2}>{bio.name}</h2>
-          <p className={classes.p}>{bio.missionStatement}</p>
+          <p className={`${classes.p} ${classes.mission}`}>{bio.missionStatement}</p>
           <h3 className={classes.h3}>Skills</h3>
           <p className={classes.p}>{bio.skills}</p>
           <h3 className={classes.h3}>Contact</h3>
           <a className={classes.links} href={`tel:+1${bio.phone}`}>{bio.phone}</a>
           <a className={classes.links} href={`mailto:${bio.email}`}>{bio.email}</a>
           <div className={classes.icons}>
-            <a className={`${classes.links} ${classes.button}`} href={resume} target="_blank" rel="noopener noreferrer">
+            <a className={classes.button} href={resume} target="_blank" rel="noopener noreferrer">
               Resume
             </a>
             <a className={classes.links} href="https://github.com/Pergamene" target="_blank" rel="noopener noreferrer">
