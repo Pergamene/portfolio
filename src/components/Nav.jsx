@@ -47,19 +47,19 @@ const useStyles = makeStyles({
     color: LIGHT,
     position: 'relative',
     left: '24px',
-    opacity: '0%',
+    opacity: '0',
     transition: 'opacity 0.3s ease-out',
   },
   moon: {
     color: DARK,
     transform: 'rotate(30deg)',
     position: 'relative',
-    opacity: '0%',
+    opacity: '0',
     transition: 'opacity 0.3s ease-out',
   },
   visible: {
     transition: 'opacity 1s ease-out',
-    opacity: '100%',
+    opacity: '100',
   },
 });
 

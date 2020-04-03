@@ -7,7 +7,7 @@ import { data } from '../assets/data';
 
 const useStyles = makeStyles({
   root: {
-    minHeight: props => props.matches ? 'calc(100vh - 189px)' : 'calc(100vh - 100px)',
+    minHeight: props => props.matchesSM ? 'calc(100vh - 189px)' : 'calc(100vh - 100px)',
     backgroundColor: props => props.darkMode ? DARK_PAGE : '',
     color: props => props.darkMode ? LIGHT : DARK,
     transition: '1s linear',
@@ -23,7 +23,7 @@ const useStyles = makeStyles({
   h1: {
     fontSize: props => props.matches ? '8vw' : '80px',
     fontWeight: '300',
-    margin: props => props.matches ? '8vw 0 0' : '20vh 0 0',
+    margin: props => props.matchesM ? '8vw 0 0' : '20vh 0 0',
   },
   p: {
     fontWeight: '500',
@@ -36,8 +36,10 @@ const useStyles = makeStyles({
 
 const Landing = props => {
   const matches = useMediaQuery('(max-width: 930px)');
+  const matchesM = useMediaQuery('(max-width: 700px)');
+  const matchesSM = useMediaQuery('(max-width: 630px)');
   const { darkMode } = props;
-  const classes = useStyles({darkMode, matches});
+  const classes = useStyles({darkMode, matches, matchesM, matchesSM});
   const { landing } = data;
 
   return (
