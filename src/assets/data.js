@@ -22,7 +22,7 @@ export const data = {
   landing: {
     path: '/',
     title: 'Full Stack Web Developer',
-    bio: 'I’m a developer with a focus on web technologies.  I am detail-oriented in my approach and prioritize organized, clean, readable code.  I excel in planning and creating the logic of a program.  I’ve spent years teaching programming concepts to kids and can explain complex subjects in ways that are easy to understand.  I am constantly seeking ways to increase my understanding and to find ways to improve personally, as well as ways that can improve the products I am working on.',
+    bio: 'I’m a developer with a focus on web technologies.  I am detail-oriented in my approach and prioritize organized, clean, readable code.  I excel in planning and creating the logic of a program.  I’ve spent years teaching programming concepts to young students and can explain complex subjects in ways that are easy to understand.  I am constantly seeking ways to increase my understanding and to find ways to improve personally, as well as ways that can improve the products I am working on.',
   },
   bio: {
     name: 'Austin Glenn',
@@ -34,25 +34,26 @@ export const data = {
     linkedinLink: 'linkedin.com/in/austinkglenn',
   },
   currentProjects: [
-    // {
-    //   name: 'Spiderweb',
-    //   date: 'Current',
-    //   stack: 'React, TypeScript, HTML, CSS, Golang, MySQL',
-    //   repo: '',
-    //   description: 'A site to manage the complex structure and relationships between aspects of worldbuilding and story writing.',
-    // },
     {
       id: 0,
       name: 'Instructional Docs',
-      date: 'Current',
+      date: 'Ongoing',
       stack: 'Markdown',
       repo: 'https://github.com/Devo-Tower/instruction',
       description: 'Instructional documents for helping new programmers learn web technologies and concepts.'
-    }
+    },
+    {
+      id: 1,
+      name: 'DiceBot',
+      date: 'Ongoing',
+      stack: 'TypeScript',
+      repo: 'https://github.com/Pergamene/dicebot-logic',
+      description: 'A dice rolling Slack app for remote D&D sessions.',
+    },
   ],
   previousProjects: [
     {
-      id: 0,
+      id: 5,
       name: 'Portfolio',
       date: '2020',
       stack: 'React, HTML, CSS',
@@ -60,7 +61,7 @@ export const data = {
       description: 'This site designed to showcase my work and skills.',
     },
     {
-      id: 1,
+      id: 4,
       name: 'Traveling Knight',
       date: '2020',
       stack: 'TypeScript, React, HTML, CSS',
@@ -69,7 +70,7 @@ export const data = {
       description: 'The primary purpose of this project was to learn TypeScript, and to try making a game with React.',
     },
     {
-      id: 2,
+      id: 3,
       name: 'Markdown Partitioner',
       date: '2019',
       stack: 'JavaScript',
@@ -77,7 +78,7 @@ export const data = {
       description: 'A program to convert between user-inputted markdown, to a formated JSON used to display formatted HTML.',
     },
     {
-      id: 3,
+      id: 2,
       name: 'Evermore Cipher',
       date: '2019',
       stack: 'JavaScript',
@@ -90,7 +91,7 @@ export const data = {
       ],
     },
     {
-      id: 4,
+      id: 1,
       name: 'Random Phrase Generator',
       date: '2015',
       stack: 'Java',
@@ -98,7 +99,7 @@ export const data = {
       description: 'A program that takes a grammar, and generates random phrases.',
     },
     {
-      id: 5,
+      id: 0,
       name: 'Huffman Compressor',
       date: '2014',
       stack: 'Java',
