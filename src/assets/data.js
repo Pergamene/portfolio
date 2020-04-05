@@ -41,7 +41,7 @@ export const data = {
       stack: 'Markdown',
       repo: 'https://github.com/Devo-Tower/instruction',
       description: 'Instructional documents for helping new programmers learn web technologies and concepts.'
-    // },
+    },
     // {
     //   id: 1,
     //   name: 'DiceBot',
