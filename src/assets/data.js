@@ -41,15 +41,15 @@ export const data = {
       stack: 'Markdown',
       repo: 'https://github.com/Devo-Tower/instruction',
       description: 'Instructional documents for helping new programmers learn web technologies and concepts.'
-    },
-    {
-      id: 1,
-      name: 'DiceBot',
-      date: 'Ongoing',
-      stack: 'TypeScript',
-      repo: 'https://github.com/Pergamene/dicebot-logic',
-      description: 'A dice rolling Slack app for remote D&D sessions.',
-    },
+    // },
+    // {
+    //   id: 1,
+    //   name: 'DiceBot',
+    //   date: 'Ongoing',
+    //   stack: 'TypeScript',
+    //   repo: 'https://github.com/Pergamene/dicebot-logic',
+    //   description: 'A dice rolling Slack app for remote D&D sessions.',
+    // },
   ],
   previousProjects: [
     {
