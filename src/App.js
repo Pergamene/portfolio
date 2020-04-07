@@ -12,6 +12,8 @@ const App = () => {
   const matches = useMediaQuery('(prefers-color-scheme: dark)');
   const [darkMode, setDarkMode] = useState(matches);
 
+  // pass darkmode and all media queries into useStyles() then pass classes down as props
+
   useEffect(() => {
     setDarkMode(matches);
   }, [matches]);
