@@ -68,7 +68,7 @@ export const useStyles = makeStyles({
     transition: 'all 0.3s ease-out, border-color 1s ease-out',
   },
   link: {
-    padding: props => props.matches ? '5px' : '20px',
+    padding: props => props.matchS ? '5px' : '20px',
     color: props => props.darkMode ? LIGHT : DARK,
     transition: 'all 1s ease-out',
   },
@@ -89,6 +89,7 @@ export const useStyles = makeStyles({
     maxWidth: '100%',
     padding: props => props.matchM ? '8vw 20px 0' : '20vh 20px 0',
     alignItems: 'center',
+    boxSizing: 'border-box',
   },
   profile: {
     display: 'flex',
