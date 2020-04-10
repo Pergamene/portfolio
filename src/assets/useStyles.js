@@ -52,27 +52,6 @@ export const useStyles = makeStyles({
     flex: '1',
     alignItems: props => props.matchS ? 'center' : '',
   },
-  toggle: {
-    padding: '10px',
-  },
-  sun: {
-    color: LIGHT,
-    position: 'relative',
-    left: '24px',
-    opacity: '0',
-    transition: 'opacity 0.3s ease-out',
-  },
-  moon: {
-    color: DARK,
-    transform: 'rotate(30deg)',
-    position: 'relative',
-    opacity: '0',
-    transition: 'opacity 0.3s ease-out',
-  },
-  visible: {
-    transition: 'opacity 1s ease-out',
-    opacity: '100',
-  },
 
   // NAV ITEM
   linkContainer: {
@@ -91,7 +70,6 @@ export const useStyles = makeStyles({
   link: {
     padding: props => props.matches ? '5px' : '20px',
     color: props => props.darkMode ? LIGHT : DARK,
-    // borderRight: props => (props.last || props.matches) ? 'none' : `2px solid ${props.darkMode ? LIGHT : DARK }`,
     transition: 'all 1s ease-out',
   },
 

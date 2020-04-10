@@ -1,7 +1,9 @@
 import React from 'react';
 
+import ProjectLinks from './ProjectLinks';
+
 const Project = props => {
-  const { data, classes } = props;
+  const { classes, data } = props;
 
   return (
     <div className={classes.projectContainer}>
@@ -10,18 +12,7 @@ const Project = props => {
         <p className={classes.date}>{data.date}</p>
         <p className={classes.stack}>{data.stack}</p>
       </div>
-      <div className={classes.projectLinks}>
-        <a className={`${classes.projectButton} ${classes.repo}`} href={data.repo} target="_blank" rel="noopener noreferrer">
-          View Repo
-        </a>
-        {data.link && <a className={`${classes.projectButton} ${classes.projectLink}`} href={data.link} target="_blank" rel="noopener noreferrer">
-          Deployed Project
-        </a>}
-      </div>
-      <p className={classes.description}>{data.description}</p>
-      {data.bullets && <ul className={classes.bullets}>
-        {data.bullets.map((bullet, index) => <li key={index}>{bullet}</li>)}
-      </ul>}
+      <ProjectLinks classes={classes} data={data} />
     </div>
   );
 };

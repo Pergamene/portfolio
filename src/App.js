@@ -29,7 +29,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <Nav classes={classes} darkMode={darkMode} matchS={matchS} toggleDarkMode={toggleDarkMode} />
+      <Nav classes={classes} matchS={matchS} darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       
       <Route exact path="/">
         <Landing classes={classes} />
