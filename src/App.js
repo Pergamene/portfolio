@@ -2,21 +2,26 @@ import React, { useState, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
+import { useStyles } from './assets/useStyles';
+
 import Nav from './components/Nav';
 import Landing from './components/Landing';
 import Bio from './components/Bio';
-import CurrentProjects from './components/CurrentProjects';
-import PreviousProjects from './components/PreviousProjects';
+import Projects from './components/Projects';
 
 const App = () => {
-  const matches = useMediaQuery('(prefers-color-scheme: dark)');
-  const [darkMode, setDarkMode] = useState(matches);
+  const matchDark = useMediaQuery('(prefers-color-scheme: dark)');
+  const matchS = useMediaQuery('(max-width: 630px)');
+  const matchM = useMediaQuery('(max-width: 700px)');
+  const matchL = useMediaQuery('(max-width: 900px)');
+  
+  const [darkMode, setDarkMode] = useState(matchDark);
 
-  // pass darkmode and all media queries into useStyles() then pass classes down as props
+  const classes = useStyles({darkMode, matchS, matchM, matchL});
 
   useEffect(() => {
-    setDarkMode(matches);
-  }, [matches]);
+    setDarkMode(matchDark);
+  }, [matchDark]);
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -24,19 +29,19 @@ const App = () => {
 
   return (
     <div className="App">
-      <Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <Nav classes={classes} darkMode={darkMode} matchS={matchS} toggleDarkMode={toggleDarkMode} />
       
       <Route exact path="/">
-        <Landing darkMode={darkMode} />
+        <Landing classes={classes} />
       </Route>
       <Route exact path="/bio">
-        <Bio darkMode={darkMode} />
+        <Bio classes={classes} />
       </Route>
       <Route exact path="/current-projects">
-        <CurrentProjects darkMode={darkMode} />
+        <Projects classes={classes} projectPage={'currentProjects'} />
       </Route>
       <Route exact path="/previous-projects">
-        <PreviousProjects darkMode={darkMode} />
+        <Projects classes={classes} projectPage={'previousProjects'} />
       </Route>
     </div>
   );
