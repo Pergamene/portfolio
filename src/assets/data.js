@@ -56,7 +56,7 @@ export const data = {
         id: 2,
         name: "Teacher's Class Website",
         date: 'Ongoing',
-        stack: 'React, Firebase',
+        stack: 'React, JavaScript, HTML, CSS, Firebase',
         repo: 'https://github.com/Pergamene/brandi-teacher-website',
         description: 'A class website to help the teacher communicate better with her students and their parents.',
       }
